@@ -9,7 +9,7 @@
     <title>Thêm sản phẩm</title>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper"> // reading base html css, don't use div tags like this.
         <header>
             <div class="header__left">
                 <h3>Trương Văn An</h3>
@@ -24,7 +24,7 @@
                 </ul>
             </div>
         </header>
-        <div class="container__admin">
+        <div class="container__admin"> //  the same
             <div class="admin__left">
                 <ul class="menu">
                     <li class="boxDrop active" data-name="homeAdmin">
@@ -49,8 +49,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="admin__right">
-                <div class="boxAdmin" data-name="homeAdmin">
+            <div class="admin__right"> // Updated convention for class names.
+                <div class="boxAdmin" data-name="homeAdmin"> // why using div here? Do not use the div tag when only wrapping a single item.
                     <h1>Bảng xếp hạng thương mại điện tử Việt Nam</h1>
                 </div>
                 <div class="boxAdmin toyen" data-name="toyen">
