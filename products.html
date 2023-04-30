@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="admin_product.css">
+    <title>Thêm sản phẩm</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header__left">
+                <h3>Trương Văn An</h3>
+            </div>  
+            <div class="header__right">
+                <ul>
+                    <li><a href="../index.html">
+                        <i class="fa-regular fa-circle-left"></i>
+                        Vào trang website</a>
+                    </li>
+                    <li><a href="">Liên hệ</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="container__admin">
+            <div class="admin__left">
+                <ul class="menu">
+                    <li class="boxDrop active" data-name="homeAdmin">
+                        <div class="boxtitle">
+                            <div>
+                                <i class="fa-solid fa-house"></i>Trang chủ Admin
+                            </div>
+                        </div>
+                    </li>
+                    <li class="boxDrop" data-name="toyen">
+                        <div class="boxtitle">
+                            <div><i class="fa-solid fa-bars-staggered"></i>Quản trị sản phẩm</div>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                        <ul class="dropdown">
+                            <li class="active"><i class="fa-solid fa-chevron-right" data-name="toyen"></i>Thêm sản phẩm Tổ Yến</li>
+                            <li><i class="fa-solid fa-chevron-right"></i>Thêm sản phẩm Yến Chưng</li>
+                            <li><i class="fa-solid fa-chevron-right"></i>Thêm sản phẩm Đồ Uống Giải Khát</li>
+                            <li><i class="fa-solid fa-chevron-right"></i>Thêm sản phẩm Nước Yến</li>
+                            <li><i class="fa-solid fa-chevron-right"></i>Thêm sản phẩm Nước Tốt Cho Sức Khỏe</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="admin__right">
+                <div class="boxAdmin" data-name="homeAdmin">
+                    <h1>Bảng xếp hạng thương mại điện tử Việt Nam</h1>
+                </div>
+                <div class="boxAdmin toyen" data-name="toyen">
+                    <h3>Thêm sản phẩm tổ yến</h3>
+                    <div class="admin__right-wrapper">
+                        <div class="admin__right-left">
+                            <form action="" id="form">
+                                <div class="itemForm">
+                                    <label for="name">Tên sản phẩm:</label><br>
+                                    <input type="text" id="name" placeholder="Tên sản phẩm" class="nameProduct">
+                                    <span class="message"></span>
+                                </div>
+                                <div class="itemForm">
+                                    <input type="file" name="image" id="image" class="image" hidden>
+                                    <input type="button" class="clickImgInput" value="Thêm ảnh" style="--color: rgb(162,9,55);"></input><span id="imgText"></span><br>
+                                    <div class="imageInput">
+                                        <img src="https://t4.ftcdn.net/jpg/04/99/93/31/360_F_499933117_ZAUBfv3P1HEOsZDrnkbNCt4jc3AodArl.jpg" alt="Không có ảnh">
+                                    </div>
+                                    <span class="messageImg"></span>
+                                </div>
+                                <div class="itemForm">
+                                    <label for="discount">Giảm giá(Nếu không giảm giá thì để trống)</label><br>
+                                    <input type="text" placeholder="Giảm giá" class="discount" id="discount">
+                                    <span class="message"></span>
+                                </div>
+                                <div class="itemForm">
+                                    <label for="price">Giá sản phẩm</label><br>
+                                    <input type="text" placeholder="Giá sản phẩm" class="price" id="price">
+                                    <span class="message"></span>
+                                </div>
+                                <button class="moreProducts" style="--color: #28a745;" type="submit">Thêm sản phẩm</button><br>
+                                <p class="linkImg"></p>
+                            </form>
+                        </div>
+                        <div class="admin__right-right">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">STT</th>
+                                    <th scope="col">Tên sản phẩm</th>
+                                    <th scope="col">Ảnh sản phẩm</th>
+                                    <th scope="col">Giảm giá</th>
+                                    <th scope="col">Giá đã giảm</th>
+                                    <th scope="col">Thao tác</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="admin_product.js"></script>
+<script>
+    reset({
+        form: '#form',
+        rules: [
+            reset.isResquired('#name'),
+            reset.isPrice('#price'),
+        ]
+    });
+</script>
+</html>
